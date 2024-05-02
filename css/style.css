@@ -110,7 +110,7 @@ h1{
 }
 .inline{
     display: inline-block;
-    font-size: 20px;
+    font-size: 0.938rem;
     vertical-align: middle;
 }
 .box_shadow_btn{
@@ -405,6 +405,18 @@ box-shadow: 0px 0px 49px 15px rgba(235,222,33,0.46);
     border: 1px solid #555555;
     margin-left: 35px;
 }
-
-
 /* ----------- 2. <<END>> COPYRIGHT CLASS -----------*/
+
+
+
+/* ------ 2. MEDIA QUERIES CLASS ------*/
+@media only screen and (max-width: 1160px){
+
+    .logo{
+        display: none;
+    }
+}
+
+
+
+/* ----------- 2. <<END>> MEDIA QUERIES CLASS -----------*/
