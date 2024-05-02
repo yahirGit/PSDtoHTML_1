@@ -410,10 +410,26 @@ box-shadow: 0px 0px 49px 15px rgba(235,222,33,0.46);
 
 
 /* ------ 2. MEDIA QUERIES CLASS ------*/
-@media only screen and (max-width: 1160px){
+@media only screen and (max-width: 1120px){
 
-    .logo{
+    #hero .cta .cta-info{
+        padding-right: 40px;
+    }
+    #big_nose .big_nose_info{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 820px){
+
+    .iphone,
+    .iphone_btn,
+    .iphone_on{
+
         display: none;
+    }
+    #hero .cta .cta-info{
+        width: 100%;
+        text-align: center;
     }
 }
 
