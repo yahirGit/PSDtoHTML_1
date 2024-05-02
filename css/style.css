@@ -1,0 +1,410 @@
+@font-face {
+    font-family: 'HelveticaNeue-Thin';
+    src:
+    local("HelveticaNeue-Thin"),
+    url("/css/HelveticaNeue-Thin.otf") format("woff2"),
+    url("/css/HelveticaNeue-Thin.otf") format("woff"),
+    url("/css/HelveticaNeue-Thin.otf") format("opentype");
+}
+/* 
+    Porque se resetean los estilos por defecto en css
+    Usar reset CSS o normalize CSS.
+
+    Principalmente se resetean porque como es un proyecto web se tendria que poder abrir en
+    en todos los navegadores. y los navegadores por defecto tienen estilos predeterminados.
+    
+*/
+/* ========== RESET CSS =========== */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ========== <<END>> RESET CSS =========== */
+
+
+/* ------ 1. GENERAL STYLE ------*/
+*{
+    box-sizing: border-box;/*calcula el alto y ancho de un elemento*/
+}
+body{
+    font-family: "Montserrat",'sans-serif';
+}
+.container{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto; /*shorthand*/ /*Centrar el elemento*/
+    position: relative;
+    overflow: hidden;
+
+    padding: 47px 20px;
+}
+h1{
+    color: blue;
+    border: solid 1px black; 
+}
+/* ----------- 1. <<END>> GENERAL STYLE -----------*/
+
+
+
+/* ------ 2. HELPER CLASS ------*/ 
+/*Su gran ayuda es en estilos repetitivos y mejor organizacion*/
+.titleSection{
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.titleFeatures{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+}
+.block{
+    display: block;
+}
+.small_text{
+    font-size: 11px;
+    margin-top: 5px;
+}
+.inline{
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;
+}
+.box_shadow_btn{
+    -webkit-box-shadow: 0px 0px 49px 15px rgba(235,222,33,0.46);
+-moz-box-shadow: 0px 0px 49px 15px rgba(235,222,33,0.46);
+box-shadow: 0px 0px 49px 15px rgba(235,222,33,0.46);
+}
+.textRed{
+    color: #f55150;
+}
+.ftLeft{
+    float : left;
+}
+.ftRight{
+    float: right;
+}
+
+/* ----------- 2. <<END>> HELPER CLASS -----------*/
+
+
+
+/* ------ 2. SECTION HERO CLASS ------*/
+#hero{
+    background-image: linear-gradient(rgba(218,51,46,0.6), rgba(218,51,46,0.6)), url('/img/hero-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero .navbar .nav li{
+    display: inline-block;
+}
+#hero .navbar .nav li a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 30px;
+}
+#hero .navbar .nav li a:hover{
+    border-bottom: 4px solid white;
+    transition: border-botton, 0.1s, color 0.1s;
+}
+
+#hero .cta{
+    display: inline-block;
+    margin-top: 90px;
+    position: relative;
+    
+}
+
+
+/* ------ 2. ANIMATIONS IPHONE CLASS ------*/
+
+#hero .cta .iphone_on{
+    position: absolute;
+    right: 108px;
+    top: 128px;
+    width: 64%;
+}
+#hero .cta .iphone_btn{
+    position: absolute;
+    right: 160px;
+}
+.js_wp_2{
+    opacity: 0;
+}
+.js_wp_2.animated{
+    opacity: 1;
+}
+.js_wp_3{
+    opacity: 0;
+    animation-delay: 3s;
+}
+.js_wp_3.animated{
+    opacity: 1;
+}
+
+/* ----------- 2. <<END>> ANIMATIONS IPHONE CLASS -----------*/
+
+
+#hero .cta .imgs{
+    float: right;
+    position: absolute;
+    right: -90px;
+}
+
+/* #hero .cta .cta-imgs .iphone{
+    width: 85%;
+    position: relative;
+    margin-bottom: -240px; hacer que la img iphone se salga de la altura de la seccion #hero
+    margin-top: 26px;
+} */
+
+#hero .cta .cta-info{
+    width: 60%;
+    padding-right: 150px;
+    float: left;
+}
+#hero .cta .cta-info h2{
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 51px;
+}
+#hero .cta .cta-info .cta-info-para{
+    font-size: 2.25rem;
+    font-weight: 300;
+    font-family: 'HelveticaNeue-Thin';
+    margin-top: 60px;
+    margin-bottom: 56px;
+    color: white;
+}
+#hero .cta .cta-info .cta-info-button{
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 30px 55px;
+    background-color: #282828;
+    border-radius: 50px;
+}
+#hero .cta .cta-info .cta-info-button:hover{
+    background-color: #383737;
+    transition: 0.3s;
+}
+#hero .cta .cta-info .cta-info-button .cta-info-button-icon-iphone{
+    vertical-align: middle;
+    padding-right: 25px;
+    /* margin-bottom: 50px; */
+}
+/* ----------- 2. <<END>> AND SECTION HERO CLASS -----------*/
+
+
+
+/* ------ 2. SECTION APP-FEATURES CLASS ------*/
+#app_features .container{
+    text-align: center;
+    padding: 88px 20px;
+}
+#app_features .titleSection{
+    margin: 0 auto;
+    color: #8a8a8a;
+    margin-bottom: 51px;
+}
+#app_features .app_para{
+    font-family: 'HelveticaNeue-Thin';
+    font-size: 22px;
+    line-height: 28px;
+    padding: 0 130px;
+}
+#app_features .row{
+    overflow: hidden;
+    margin-top: 50px;
+}
+#app_features .row .col-4-app{
+    width: 33.33%;
+    float: left;
+    padding: 0 45px;
+}
+#app_features .row .col-4-app h3{
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 38px 0;
+}
+#app_features .row .col-4-app p{
+    font-size: 18px;
+    font-family: 'HelveticaNeue-Thin';
+    color: #646464;
+}
+
+
+/* ----------- 2. <<END>> SECTION APP-FEATURES CLASS -----------*/
+
+
+
+/* ------ 3. SECTION BIG NOSE CLASS ------*/
+#big_nose{
+    background: url('/img/nose-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#big_nose .big_nose_info{
+    width: 68%;
+    padding-top: 200px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 160px;
+}
+#big_nose h2{
+    text-transform: uppercase;
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    margin-left: -10px;
+    color: white;
+}
+#big_nose p{
+    font-family: 'HelveticaNeue-Thin';
+    font-size: 24px;
+    color: #585858;
+    margin-bottom: 80px;
+    margin-left: -10px;
+    width: 50%;
+}
+#big_nose .big_nose_button{
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #d9332d;
+    padding: 21px 26px;
+    border-radius: 50px;
+    margin-left: 15px;
+}
+/* ----------- 3. <<END>> SECTION BIG NOSE CLASS -----------*/
+
+
+
+/* ------ 2. FOOTER CLASS ------*/
+#footer_app{
+    background-color: #2e2e38;
+}
+#footer_app .container{
+    padding: 120px 20px;
+}
+#footer_app .row .col-4-footer{
+    float: left;
+    width: 33.33%;
+    margin-top: 77px;
+    padding: 30px;
+    color: white;
+}
+#footer_app .row .col-4-footer h3{
+    font-weight: 700;
+    font-size: 19px;
+    text-transform: capitalize;
+    color: white;
+}
+#footer_app .row .col-4-footer .list_posts li{
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    padding-left: 70px;
+}
+#footer_app .row .col-4-footer .list_posts .list_items_red{
+    background: url('/img/rectangle.png') no-repeat;
+}
+#footer_app .col-4-footer .list_posts,
+.list_tweets {
+    margin-top: 25px;
+    font-family: 'HelveticaNeue-Thin';
+}
+#footer_app .row .col-4-footer .list_tweets li{
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+#footer_app .row .col-4-footer .p_about{
+    font-style: italic;
+    font-size: 15px;
+    margin-top: 25px;
+    line-height: 20px;
+}
+/* ----------- 2. <<END>> FOOTER CLASS -----------*/
+
+
+
+/* ------ 2. SECCION COPYRIGHT CLASS ------*/
+#copyright{
+    background: #d7dedc;
+}
+#copyright .container{
+    padding: 30px 0;
+    text-align: center;
+}
+#copyright .container .text_in_line{
+    display: inline-block;
+}
+.text_p, .web_url{
+    margin-right: 40px;
+}
+.fb,
+.dr{
+    margin-right: 40px;
+}
+.text_p:after, 
+.web_url:after{
+    content: "";
+    border: 1px solid #555555;
+    margin-left: 35px;
+}
+
+
+/* ----------- 2. <<END>> COPYRIGHT CLASS -----------*/
