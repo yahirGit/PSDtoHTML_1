@@ -2,6 +2,13 @@ $(document).ready(function() {
 
     new WOW().init();
 
+    //Seleccionar la clase burguer con el evento .on click
+    //Seleccionar el elemento de la barra de navegacion
+    //Con el metodo .toggleClass le asignamos la clase open a la lista u 
+    $(".burger_nav").on("click", function(e) {
+        $("#hero .navbar .nav").toggleClass("open");
+    });
+
     $('.js_wp_2').waypoint(function(direction) {
         $('.js_wp_2').addClass('animated slideInUp')
     },{
