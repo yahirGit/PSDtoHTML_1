@@ -238,7 +238,7 @@ h1 {
 
 /* ------ 2. SECTION HERO CLASS ------*/
 #hero {
-    background-image: linear-gradient(rgba(218, 51, 46, 0.6), rgba(218, 51, 46, 0.6)), url('/img/hero-bg.png');
+    background-image: linear-gradient(rgba(218, 51, 46, 0.6), rgba(218, 51, 46, 0.6)), url('../img/hero-bg.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -410,7 +410,7 @@ h1 {
 
 /* ------ 3. SECTION BIG NOSE CLASS ------*/
 #big_nose {
-    background: url('/img/nose-bg.png');
+    background: url('../img/nose-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -489,7 +489,7 @@ h1 {
 }
 
 #footer_app .row .col-4-footer .list_posts .list_items_red {
-    background: url('/img/rectangle.png') no-repeat;
+    background: url('../img/rectangle.png') no-repeat;
 }
 
 #footer_app .col-4-footer .list_posts,
@@ -597,7 +597,7 @@ h1 {
     }
     #hero .navbar .burger_nav{
 
-        background: url("/img/hamburger.png") no-repeat 100% center;
+        background: url("../img/hamburger.png") no-repeat 100% center;
         display: block;
         height: 31px;
         width: 40px;
@@ -636,7 +636,6 @@ h1 {
 }
 
 @media only screen and (max-width: 733px) {
-
     .fb,
     .dr,
     .tw {
@@ -665,7 +664,6 @@ h1 {
 
     .text_p:after,
     .web_url:after {
-
         display: none;
     }
 
